@@ -10,9 +10,10 @@ return [
     | This value is the name of your application. This value is used when the
     | framework needs to place the application's name in a notification or
     | any other location as required by the application or its packages.
+    |
     */
 
-    'name' => 'Roles-Permissions Manager',
+    'name' => env('APP_NAME', 'Laravel'),
 
     /*
     |--------------------------------------------------------------------------
@@ -65,19 +66,6 @@ return [
     */
 
     'timezone' => 'UTC',
-
-    /*
-     |--------------------------------------------------------------------------
-     | Application Date Format
-     |--------------------------------------------------------------------------
-     |
-     | Here you may specify the default date format for your application, which
-     | will be used with date and date-time functions.
-     |
-     */
-
-     'date_format' => 'Y-m-d',
-     'date_format_js' => 'yy-mm-dd',
 
     /*
     |--------------------------------------------------------------------------
@@ -179,10 +167,7 @@ return [
         /*
          * Package Service Providers...
          */
-        Laravel\Tinker\TinkerServiceProvider::class,
-        Intervention\Image\ImageServiceProvider::class,
-        Collective\Html\HtmlServiceProvider::class,
-        
+
         /*
          * Application Service Providers...
          */
@@ -191,7 +176,6 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        Spatie\Permission\PermissionServiceProvider::class,
 
     ],
 
@@ -207,6 +191,7 @@ return [
     */
 
     'aliases' => [
+
         'App' => Illuminate\Support\Facades\App::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,
         'Auth' => Illuminate\Support\Facades\Auth::class,
@@ -241,13 +226,6 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
-        /*
-         * Package Aliases
-         */
-        'Image'        => Intervention\Image\Facades\Image::class,
-        'Form'         => Collective\Html\FormFacade::class,
-        'Html'         => Collective\Html\HtmlFacade::class,
-        
     ],
 
 ];

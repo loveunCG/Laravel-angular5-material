@@ -5,7 +5,11 @@
 /vendor
 /.idea
 /.vagrant
+/storage
+/public
+/config
 Homestead.json
 Homestead.yaml
 npm-debug.log
 .env
+package-lock.json
